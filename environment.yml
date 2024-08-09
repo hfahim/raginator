@@ -1,0 +1,23 @@
+name: lodgify_env
+channels:
+  - conda-forge
+dependencies:
+  - python-dotenv
+  - fuzzywuzzy
+  - pandas
+  - pip
+  - pydantic>=2, <3
+  - pytest
+  - python=3.11
+  - scipy
+  - tiktoken
+  - pip:
+      - PyGithub
+      - githubkit
+      - requests
+      - langchain
+      - langchain-community
+      - langchain-openai
+      - langchainhub
+      - chromadb
+      - esprima

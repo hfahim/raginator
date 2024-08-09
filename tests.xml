@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="1.106" timestamp="2024-08-05T23:05:29.449361-04:00" hostname="Heshams-MacBook-Pro.local"><testcase classname="" name="verify_pack.test_verify_rag" file="verify_pack/test_verify_rag.py" time="0.000"><error message="collection failure">verify_pack/test_verify_rag.py:3: in &lt;module&gt;
+    from app.app import RAG
+app/app.py:127: in &lt;module&gt;
+    print(myrag.main())
+app/app.py:107: in main
+    db = self.vectorize(path)
+app/app.py:31: in vectorize
+    self.db = Chroma.from_documents(documents, OpenAIEmbeddings(), persist_directory=".chromadb")
+/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/site-packages/langchain_community/vectorstores/chroma.py:878: in from_documents
+    return cls.from_texts(
+/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/site-packages/langchain_community/vectorstores/chroma.py:814: in from_texts
+    chroma_collection = cls(
+/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/site-packages/langchain_core/_api/deprecation.py:203: in warn_if_direct_instance
+    return wrapped(self, *args, **kwargs)
+/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/site-packages/langchain_community/vectorstores/chroma.py:128: in __init__
+    self._collection = self._client.get_or_create_collection(
+/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/site-packages/chromadb/api/client.py:237: in get_or_create_collection
+    return self._server.get_or_create_collection(
+/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/site-packages/chromadb/telemetry/opentelemetry/__init__.py:127: in wrapper
+    return f(*args, **kwargs)
+/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/site-packages/chromadb/api/segment.py:217: in get_or_create_collection
+    return self.create_collection(  # type: ignore
+/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/site-packages/chromadb/telemetry/opentelemetry/__init__.py:127: in wrapper
+    return f(*args, **kwargs)
+/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/site-packages/chromadb/api/segment.py:167: in create_collection
+    coll, created = self._sysdb.create_collection(
+/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/site-packages/chromadb/telemetry/opentelemetry/__init__.py:127: in wrapper
+    return f(*args, **kwargs)
+/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/site-packages/chromadb/db/mixins/sysdb.py:209: in create_collection
+    existing = self.get_collections(name=name, tenant=tenant, database=database)
+/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/site-packages/chromadb/telemetry/opentelemetry/__init__.py:127: in wrapper
+    return f(*args, **kwargs)
+/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/site-packages/chromadb/db/mixins/sysdb.py:435: in get_collections
+    rows = cur.execute(sql, params).fetchall()
+E   sqlite3.OperationalError: no such column: collections.topic</error></testcase></testsuite></testsuites>
